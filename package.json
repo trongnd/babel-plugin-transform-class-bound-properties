@@ -1,0 +1,31 @@
+{
+  "name": "babel-plugin-transform-class-bound-properties",
+  "version": "1.0.1",
+  "description": "This plugin transforms bound properties declared with the arrow function property initializer syntax",
+  "repository": "https://github.com/trongnd/babel-plugin-transform-class-bound-properties",
+  "author": "Trong Nguyen <trong.nd@outlook.com>",
+  "license": "MIT",
+  "keywords": [
+    "babel-plugin",
+    "transform-class-bound-properties",
+    "react",
+    "react-native",
+    "hot-reload",
+    "hmr"
+  ],
+  "main": "lib/plugin.js",
+  "scripts": {
+    "compile": "babel src --out-dir lib",
+    "prepublish": "npm run compile",
+    "test": "cd test && babel * --out-dir out",
+    "pretest": "npm run compile"
+  },
+  "dependencies": {
+    "babel-plugin-syntax-class-properties": "^6.8.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1"
+  }
+}
